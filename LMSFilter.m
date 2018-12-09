@@ -5,11 +5,11 @@ classdef LMSFilter
     end
     methods
         function obj = LMSFilter(mu,order)
-            if nargin > 0
+            if nargin == 2
                 obj.mu = mu;
                 obj.order = order;
             else
-                error('Please Enter Parameters')
+                error('Missing Parameters: Be Suer to Enter Mu and Filter Order')
             end
         end
         function [y,e,w] = lms(obj,x,d)
